@@ -20,10 +20,13 @@ so here there are a number of examples
 }
 ```
 ## Run a container
+in this case I tried to run two instances from my app by /apps/run/app. in the code I generate random name for these containers.
 /apps/run/appname
 ```
-CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
-26f3fb5ed7f8   nginx     "/docker-entrypoint.…"   21 seconds ago   Up 18 seconds   80/tcp    1336
+alishazaee@server:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS     NAMES
+62cae83cf832   nginx     "/docker-entrypoint.…"   7 seconds ago   Up 4 seconds   80/tcp    1827
+26f3fb5ed7f8   nginx     "/docker-entrypoint.…"   6 minutes ago   Up 6 minutes   80/tcp    1336
 ```
 ## Container Status
 you can also check the status of your container. R means it is running and F means it has been finished.
