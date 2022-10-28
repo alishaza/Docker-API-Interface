@@ -46,7 +46,7 @@ you can also check the status of your container. R means it is running and F mea
 ]
 ```
 
-You can also delete and edit your app settings. so jump into this sample code and enjoy :))
+You can also delete and edit your app settings. connect it to mysql and jump into this sample code and enjoy it :))
 
 In many scenarios, you need to measure the performance of the system, for this purpose, you should measure the system by monitoring systems such as ELK or Prometheus when logging events.However, in this scenario we did not consider them but they are very important and they must be considered in implementations.
 
