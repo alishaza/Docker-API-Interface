@@ -3,8 +3,42 @@ this is a sample project that helps you to abstract the functionality of docker 
 this would be the architecture how we implemented this :
 ![Capture](https://user-images.githubusercontent.com/53411387/198748839-b85c023d-e967-44d7-821b-d5dabed33c19.PNG)
 Although such an assumption may not be true in actual design, it gives you a good idea to understand the performance of cloud companies that try to abstract the DevOps processes.
+so here there are a number of examples
 
+## Add new app
+/apps/
+```
+{
+	"name": "app",
+	"image": "nginx",
+	"command": "sleep 1000",
+	"variables": [{
+		"key1": "value1"
+	}, {
+		"key2": "value2"
+	}]
+}
+```
+## Run a container
+/apps/run/appname
+```
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
+26f3fb5ed7f8   nginx     "/docker-entrypoint.…"   21 seconds ago   Up 18 seconds   80/tcp    1336
+```
+## Container Status
+you can also check the status of your container. R means it is running and F means it has been finished.
+/apps/containers
+```
+[
+    {
+        "name": "1336",
+        "Status": "R",
+        "images": "app"
+    }
+]
+```
 
+You can also delete and edit your app settings. so jump into this sample code and enjoy :))
 
 In many scenarios, you need to measure the performance of the system, for this purpose, you should measure the system by monitoring systems such as ELK or Prometheus when logging events.However, in this scenario we did not consider them but they are very important and they must be considered in implementations.
 
